@@ -355,13 +355,13 @@ export default function App() {
   };
 
   const copyEmailToClipboard = async () => {
-    try {
-      await navigator.clipboard.writeText("l3jovano@uwaterloo.ca");
-      setEmailCopied(true);
-      setTimeout(() => setEmailCopied(false), 2000);
-    } catch (err) {
-      console.error("Failed to copy email:", err);
-    }
+    // try {
+    //   await navigator.clipboard.writeText("l3jovano@uwaterloo.ca");
+    //   setEmailCopied(true);
+    //   setTimeout(() => setEmailCopied(false), 2000);
+    // } catch (err) {
+    //   console.error("Failed to copy email:", err);
+    // }
   };
 
   const currentElement = carouselElements[currentIndex];
@@ -650,10 +650,10 @@ export default function App() {
 
                 {/* Email text */}
                 <div 
-                  onClick={copyEmailToClipboard}
-                  className={`pr-8 transition-all cursor-pointer select-none ${!emailCopied && 'underline'} ${emailCopied ? (isDark ? 'text-green-400' : 'text-green-600') : (isDark ? 'text-gray-400 hover:text-gray-200' : 'text-gray-500 hover:text-gray-700')}`}
+                  // onClick={copyEmailToClipboard}
+                  className={`pr-8 transition-all ${(isDark ? 'text-gray-400' : 'text-gray-500')}`}
                 >
-                  {emailCopied ? 'Copied!' : 'l3jovano@uwaterloo.ca'}
+                  l3jovano@uwaterloo.ca
                 </div>
               </div>
             </motion.div>
