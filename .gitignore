@@ -59,3 +59,4 @@ coverage/
 # Optional: lockfiles are typically committed (uncomment to ignore)
 # package-lock.json
 # yarn.lock
+.vercel

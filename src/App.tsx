@@ -356,7 +356,7 @@ export default function App() {
 
   const copyEmailToClipboard = async () => {
     try {
-      // await navigator.clipboard.writeText("l3jovano@uwaterloo.ca");
+      await navigator.clipboard.writeText("l3jovano@uwaterloo.ca");
       setEmailCopied(true);
       setTimeout(() => setEmailCopied(false), 2000);
     } catch (err) {
