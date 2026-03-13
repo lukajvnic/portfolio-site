@@ -1,0 +1,47 @@
+.panel {
+    margin-bottom: 1rem;
+}
+
+.panel-block {
+    margin-top: 1rem;
+    display: block;
+}
+
+.panel-image {
+    height: 1rem;
+    width: 1rem;
+}
+
+.panel-image-container {
+    display: flex;
+    align-items: center;
+}
+
+.panel-image-container {
+    margin-right: 0.3rem;
+}
+
+.panel-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.panel-header-content {
+    display: flex;
+}
+
+.panel-item {
+    display: flex;
+    margin-top: 0.2rem;
+}
+
+.panel-header-side {
+    color: #777;
+}
+
+.panel-content {
+    display: block;
+    margin-left: 1.5rem;
+}
