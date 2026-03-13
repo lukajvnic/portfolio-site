@@ -21,8 +21,8 @@ export default function Dropdown({ title, description, count, children }: { titl
     const [open, setOpen] = useState(false);
 
     return (
-        <div className="dropdown" onClick={() => setOpen(!open)}>
-            <div className="dropdown-header">
+        <div className="dropdown">
+            <div className="dropdown-header" onClick={() => setOpen(!open)}>
                 <div className="dropdown-count">
                     {toRoman(count)}.
                 </div>

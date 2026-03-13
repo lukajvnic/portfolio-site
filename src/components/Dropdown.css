@@ -46,7 +46,7 @@
 }
 
 .dropdown-content {
-    margin-left: 1.5rem;
+    margin-left: calc(2.8rem + 7px);
     margin-top: 0.25rem;
     margin-bottom: 0.5rem;
 }
