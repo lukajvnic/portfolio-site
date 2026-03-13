@@ -1,8 +1,7 @@
 import './App.css'
 import Panel, { PanelItem } from './components/Panel';
+import Dropdown from './components/Dropdown';
 import { FaGithub, FaLinkedin, FaRegEnvelope } from 'react-icons/fa';
-import { BsArrowReturnRight } from "react-icons/bs";
-
 
 function App() {
 
@@ -20,30 +19,25 @@ function App() {
       </div>
       <div className="block">
         <p>
-          Studying computer science @ <a href="https://uwaterloo.ca/" target="_blank">UWaterloo</a>
+          I'm currently studying computer science at the <a href="https://uwaterloo.ca/" target="_blank">University of Waterloo</a>, and
+          have a strong interest in building meaningful and ethical software.
         </p>
       </div>
       <div className="block">
         <p>
-          I'm passionate about building meaningful and ethical software,
-          with a focus on the average person's user experience.
-        </p>
-      </div>
-      <div className="block">
-        <p>
-          I've recently been in the news for transit-related projects,
+          I've recently been in the news for a couple of transit-related projects,
           including <a href="https://toronto.citynews.ca/video/2026/01/22/student-created-website-reveals-the-slow-speeds-of-ttc-streetcars-in-real-time/" target="_blank">CityNews</a>, <a href="https://www.blogto.com/city/2024/01/map-ttc-streetcar-system-looked/" target="_blank">BlogTO</a>, and <a href="https://uwaterloo.ca/math/news/waterloo-student-builds-program-track-speed-ttc-streetcars" target="_blank">Waterloo News</a>.
         </p>
       </div>
       <div className="block">
         <p>
-          I try to diversify my interests, and am spending a lot of free time reading
-          about urban planning, astronomy, and machine learning.
+          I try to diversify my interests, and spend a good chunk of my free time
+          reading about urban planning, astronomy, and machine learning.
         </p>
       </div>
 
       <div className="page-break">
-        ———
+        {/* ——— */}
       </div>
 
       <div className="header">
@@ -72,7 +66,7 @@ function App() {
 
 
       <div className="page-break">
-        ———
+        {/* ——— */}
       </div>
 
       <div className="header">
@@ -80,53 +74,95 @@ function App() {
           Projects
         </div>
       </div>
+      <div className="space"></div>
       <div className="block">
-        [INSERT] list of dropdowns for projects (on hover) (roman numerals)
-        <ol>
-          <li>ttcleaderboard</li>
-          <li>savebasketweaving</li>
-          <li>nuncius</li>
-          <li>labpath</li>
-          <li>avocado</li>
-          <li>studyscope</li>
-          <li>old streetcars</li>
-          <li>flowfields</li>
-          <li>uwpolls</li>
-          <li>yapchain</li>
-          <li>navika</li>
-        </ol>
-        <div className="dropdowns-container">
-          <div className="dropdown">
-            <div className="dropdown-header">
-              <div className="dropdown-arrow">
+        <Dropdown
+          title="ttcleaderboard"
+          description={<span>live ranking of streetcars by speed <strong style={{ color: "#333" }}>(15k+ users)</strong></span>}
+          count={1}
+        >
+          hi
+        </Dropdown>
 
-              </div>
-              <div className="dropdown-title">
-                ttcleaderboard
-              </div>
-            </div>
-          </div>
-        </div>
+        <Dropdown
+          title="savebasketweaving"
+          description={<span>auto-emailer to protest OSAP cuts <strong style={{ color: "#333" }}>(1k+ emails)</strong></span>}
+          count={2}
+        >
+          hi
+        </Dropdown>
+
+        <Dropdown
+          title="nuncius"
+          description={<span>cli based end-to-end encrypted chatroom</span>}
+          count={3}
+        >
+          hi
+        </Dropdown>
+
+        <Dropdown
+          title="endocrine disruptors"
+          description={<span>applied ml research <strong style={{ color: "#333" }}>(labpath winner)</strong></span>}
+          count={4}
+        >
+          hi
+        </Dropdown>
+
+        <Dropdown
+          title="avocado"
+          description={<span>tiktok fact checker <strong style={{ color: "#333" }}>(deltahacks winner)</strong></span>}
+          count={5}
+        >
+          hi
+        </Dropdown>
+
+        <Dropdown
+          title="studyscope"
+          description={<span>commissioned website for a tutoring service</span>}
+          count={6}
+        >
+          hi
+        </Dropdown>
+
+        <Dropdown
+          title="old streetcars"
+          description={<span>interactive map of toronto's streetcar routes in 1945</span>}
+          count={7}
+        >
+          hi
+        </Dropdown>
+
+        <Dropdown
+          title="flowfields"
+          description={<span>graphical simulations using vector fields</span>}
+          count={8}
+        >
+          hi
+        </Dropdown>
+
+        <Dropdown
+          title="uwpolls"
+          description={<span>website to post anonymous polls</span>}
+          count={9}
+        >
+          hi
+        </Dropdown>
+
+        <Dropdown
+          title="yapchain"
+          description={<span>web3 based chatroom <strong style={{ color: "#333" }}>(jamhacks winner)</strong></span>}
+          count={10}
+        >
+          hi
+        </Dropdown>
       </div>
-      <div className="block">
-        <div className="bp-header">
-          I've enjoyed working on these projects
-        </div>
-        <ol className="bp-content" type="i">
-          <li><a>ttcleaderboard</a> ~ live leaderboard of <a>TTC</a> streetcars by speed</li>
-          <li><a>savebasketweaving</a> ~ emails <a>MPPs</a> in protest of <a>OSAP</a> cuts</li>
-          <li><a>nuncius</a> ~ encrypted chatroom, mainly to learn cryptography</li>
-        </ol>
-        <div className="bp-header">
-          See more in my (semi-exhaustive) <a>project catalogue</a>
-        </div>
-      </div>
+
       <div className="footer">
         <div className="footer-c">
           Лука Јовановић
         </div>
         <div className="footer-c">
-          © 2026
+          Toronto, 2026
         </div>
       </div>
     </div>
