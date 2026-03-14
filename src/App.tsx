@@ -2,11 +2,13 @@ import './App.css'
 import Panel, { PanelItem } from './components/Panel';
 import Dropdown from './components/Dropdown';
 import { FaGithub, FaLinkedin, FaRegEnvelope } from 'react-icons/fa';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
 
   return (
     <div className="main-container">
+      <Analytics />
       <div className="header">
         <div className="name">
           Luka Jovanovic
