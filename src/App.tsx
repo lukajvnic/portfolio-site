@@ -50,7 +50,7 @@ function App() {
       <div className="block panel-block">
         <Panel
           company="Shopify"
-          date="May - Aug '26"
+          date="May - Aug 2026"
           image_url="https://cdn.worldvectorlogo.com/logos/shopify.svg"
         >
           <PanelItem>Incoming swe intern</PanelItem>
@@ -58,7 +58,7 @@ function App() {
 
         <Panel
           company="Royal Bank of Canada"
-          date="Jul - Aug, '24 & '25"
+          date="Summer 2024 + 2025"
           image_url="https://cdn.worldvectorlogo.com/logos/rbc-4.svg"
         >
           <PanelItem>Worked on the API security team</PanelItem>
