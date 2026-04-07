@@ -57,6 +57,14 @@ function App() {
         </Panel>
 
         <Panel
+          company="Krembil Research Institute"
+          date="April 2026 - Present"
+          image_url="https://cdn.worldvectorlogo.com/logos/university-of-toronto.svg"
+        >
+          <PanelItem>Machine learning + neuroscience researcher</PanelItem>
+        </Panel>
+
+        <Panel
           company="Royal Bank of Canada"
           date="Summer 2024 + 2025"
           image_url="https://cdn.worldvectorlogo.com/logos/rbc-4.svg"
