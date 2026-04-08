@@ -53,7 +53,7 @@ function App() {
           date="May - Aug 2026"
           image_url="https://cdn.worldvectorlogo.com/logos/shopify.svg"
         >
-          <PanelItem>Incoming swe intern</PanelItem>
+          <PanelItem>Incoming swe intern, security team</PanelItem>
         </Panel>
 
         <Panel
