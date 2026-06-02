@@ -2,13 +2,11 @@ import './App.css'
 import Panel, { PanelItem } from './components/Panel';
 import Dropdown from './components/Dropdown';
 import { FaGithub, FaLinkedin, FaRegEnvelope } from 'react-icons/fa';
-import { Analytics } from '@vercel/analytics/react';
 
 function App() {
 
   return (
     <div className="main-container">
-      <Analytics />
       <div className="header">
         <div className="name">
           Luka Jovanovic
@@ -53,7 +51,8 @@ function App() {
           date="May - Aug 2026"
           image_url="https://cdn.worldvectorlogo.com/logos/shopify.svg"
         >
-          <PanelItem>Incoming swe intern, security team</PanelItem>
+          <PanelItem>SWE intern, security team</PanelItem>
+          <PanelItem>Currently experimenting with MCPs and data privacy</PanelItem>
         </Panel>
 
         <Panel
@@ -62,6 +61,7 @@ function App() {
           image_url="https://cdn.worldvectorlogo.com/logos/university-of-toronto.svg"
         >
           <PanelItem>Machine learning + neuroscience researcher</PanelItem>
+          <PanelItem>Investigating LLM epilepsy diagnoses and their rationales.</PanelItem>
         </Panel>
 
         <Panel
