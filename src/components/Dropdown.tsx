@@ -22,20 +22,25 @@ export default function Dropdown({ title, description, count, children }: { titl
 
     return (
         <div className="dropdown">
-            <div className="dropdown-header" onClick={() => setOpen(!open)}>
-                <div className="dropdown-count">
+            <button
+                type="button"
+                className="dropdown-header"
+                aria-expanded={open}
+                onClick={() => setOpen(!open)}
+            >
+                <span className="dropdown-count">
                     {toRoman(count)}.
-                </div>
-                <div className={`dropdown-chevron ${open ? 'dropdown-chevron--open' : ''}`}>
+                </span>
+                <span className={`dropdown-chevron ${open ? 'dropdown-chevron--open' : ''}`}>
                     <span className="dropdown-triangle" />
-                </div>
-                <div className="dropdown-title">
+                </span>
+                <span className="dropdown-title">
                     {title}
-                </div>
-                <div className="dropdown-description">
+                </span>
+                <span className="dropdown-description">
                     — {description}
-                </div>
-            </div>
+                </span>
+            </button>
             {open && (
                 <div className="dropdown-content">
                     {children}
