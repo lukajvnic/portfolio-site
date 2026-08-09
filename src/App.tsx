@@ -32,7 +32,7 @@ function App() {
       <div className="block">
         <p>
           I try to diversify my interests, and spend a good chunk of my free time
-          reading about urban planning, astronomy, and machine learning.
+          reading about urban planning, philosophy, and machine learning.
         </p>
       </div>
 
