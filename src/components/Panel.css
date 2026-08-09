@@ -1,47 +1,83 @@
-.panel {
-    margin-bottom: 1rem;
+.entry {
+    display: grid;
+    grid-template-columns: 1.25rem 1fr auto;
+    column-gap: 0.7rem;
+    align-items: baseline;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--rule);
 }
 
-.panel-block {
-    margin-top: 1rem;
-    display: block;
+.entry:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
 }
 
-.panel-image {
-    height: 1rem;
-    width: 1rem;
-}
-
-.panel-image-container {
+.entry-logo {
+    grid-column: 1;
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    /* nudge the icon onto the name's baseline */
+    transform: translateY(0.2rem);
 }
 
-.panel-image-container {
-    margin-right: 0.3rem;
+.entry-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
-.panel-header {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
+.entry-name {
+    grid-column: 2;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    font-variation-settings: 'opsz' 18;
+    letter-spacing: -0.005em;
+    justify-self: start;
 }
 
-.panel-header-content {
-    display: flex;
+/* the row is already a link target — keep the rule off until hover */
+a.entry-name {
+    text-decoration-color: transparent;
 }
 
-.panel-item {
-    display: flex;
-    margin-top: 0.2rem;
+a.entry-name:hover {
+    text-decoration-color: var(--accent);
 }
 
-.panel-header-side {
-    color: #777;
+.entry-date {
+    grid-column: 3;
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    color: var(--meta);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
 }
 
-.panel-content {
-    display: block;
-    margin-left: 1.5rem;
+.entry-note {
+    grid-column: 2 / -1;
+    margin: 0.2rem 0 0;
+    color: var(--muted);
+    font-size: 0.9375rem;
+    font-weight: 300;
+    line-height: 1.55;
+    text-wrap: pretty;
+}
+
+@media (max-width: 720px) {
+    .entry {
+        grid-template-columns: 1.25rem 1fr;
+    }
+
+    .entry-date {
+        grid-column: 2;
+        grid-row: 2;
+        margin-bottom: 0.15rem;
+    }
+
+    .entry-note {
+        grid-row: 3;
+    }
 }

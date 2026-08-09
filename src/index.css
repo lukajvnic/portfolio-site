@@ -1,4 +1,98 @@
 @font-face {
+  font-family: 'Source Serif 4';
+  src: url('/fonts/SourceSerif4-Variable.woff2') format('woff2-variations');
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Cyrillic subset — the footer signature is set in Serbian */
+@font-face {
+  font-family: 'Source Serif 4';
+  src: url('/fonts/SourceSerif4-Cyrillic-Variable.woff2') format('woff2-variations');
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: 'Source Serif 4';
+  src: url('/fonts/SourceSerif4-Italic-Variable.woff2') format('woff2-variations');
+  font-weight: 300 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Noto Sans';
   src: url('/fonts/NotoSans-Regular.ttf');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('/fonts/NotoSans-Medium.ttf');
+  font-weight: 500;
+  font-display: swap;
+}
+
+:root {
+  /* Surfaces */
+  --bg: #ffffff;
+  --bg-raised: #f7f7f5;
+  --rule: #e4e4e0;
+
+  /* Ink */
+  --ink: #141413;
+  --muted: #66655f;
+  --meta: #9a9992;
+
+  /* The one accent. Links and numerals, nothing else. */
+  --accent: #2f6b4a;
+  --accent-soft: #b4cdbe;
+
+  --serif: 'Source Serif 4', ui-serif, Georgia, serif;
+  --sans: 'Noto Sans', ui-sans-serif, system-ui, sans-serif;
+
+  --measure: 620px;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  font-variation-settings: 'opsz' 14;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

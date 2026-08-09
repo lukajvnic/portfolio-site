@@ -1,5 +1,5 @@
 import './App.css'
-import Panel, { PanelItem } from './components/Panel';
+import Panel from './components/Panel';
 import Dropdown from './components/Dropdown';
 import { FaGithub, FaLinkedin, FaRegEnvelope } from 'react-icons/fa';
 
@@ -12,12 +12,12 @@ function App() {
           Luka Jovanovic
         </div>
         <div className="links">
-          <a className="link" href="https://github.com/lukajvnic" target="_blank"><FaGithub size={20} id="github" color="#181717" /></a>
-          <a className="link" href="https://www.linkedin.com/in/luka-j-ovanovic/" target="_blank"><FaLinkedin size={20} id="linkedin" color="#181717" /></a>
-          <a className="link" href="mailto:l3jovano@uwaterloo.ca"><FaRegEnvelope size={20} id="email" color="#181717" /></a>
+          <a className="link" href="https://github.com/lukajvnic" target="_blank" aria-label="GitHub"><FaGithub size={19} /></a>
+          <a className="link" href="https://www.linkedin.com/in/luka-j-ovanovic/" target="_blank" aria-label="LinkedIn"><FaLinkedin size={19} /></a>
+          <a className="link" href="mailto:l3jovano@uwaterloo.ca" aria-label="Email"><FaRegEnvelope size={19} /></a>
         </div>
       </div>
-      <div className="block">
+      <div className="block intro">
         <p>
           I'm currently studying computer science at the <a href="https://uwaterloo.ca/" target="_blank">University of Waterloo</a>, and
           have a strong interest in building meaningful and ethical software.
@@ -36,59 +36,47 @@ function App() {
         </p>
       </div>
 
-      <div className="page-break">
-        {/* ——— */}
+      <div className="section">
+        <span className="section-title">Work</span>
+        <span className="section-rule" />
       </div>
-
-      <div className="header">
-        <div className="name">
-          Work
-        </div>
-      </div>
-      <div className="block panel-block">
+      <div className="block">
         <Panel
           company="Shopify"
-          date="May - Aug 2026"
+          date="2026"
+          href="https://www.shopify.com/"
           image_url="https://cdn.worldvectorlogo.com/logos/shopify.svg"
         >
-          <PanelItem>SWE intern, security team</PanelItem>
-          <PanelItem>Currently experimenting with MCPs and data privacy</PanelItem>
+          Security team, accelerating internal tooling releases and integrating device analytics into shopify's MCP.
         </Panel>
 
         <Panel
           company="Krembil Research Institute"
-          date="April 2026 - Present"
+          date="2026"
+          href="https://www.uhn.ca/Research/Research_Institutes/Krembil"
           image_url="https://cdn.worldvectorlogo.com/logos/university-of-toronto.svg"
         >
-          <PanelItem>Machine learning + neuroscience researcher</PanelItem>
-          <PanelItem>Investigating LLM epilepsy diagnoses and their rationales.</PanelItem>
+          Machine learning and neuroscience research, analysing EEG scans with VLMs by finetuning on the text rationale to provide verifiable diagnoses in a clinical setting.
         </Panel>
 
         <Panel
           company="Royal Bank of Canada"
-          date="Summer 2024 + 2025"
+          date="2024 + 2025"
+          href="https://www.rbc.com/"
           image_url="https://cdn.worldvectorlogo.com/logos/rbc-4.svg"
         >
-          <PanelItem>Worked on the API security team</PanelItem>
-          <PanelItem>Built a full-stack financial plan review system</PanelItem>
+          Automated lots of compliance work and designed a system to pre-emptively catch errors in financial plans.
         </Panel>
       </div>
 
-
-      <div className="page-break">
-        {/* ——— */}
+      <div className="section">
+        <span className="section-title">Projects</span>
+        <span className="section-rule" />
       </div>
-
-      <div className="header">
-        <div className="name">
-          Some projects
-        </div>
-      </div>
-      <div className="space"></div>
       <div className="block">
         <Dropdown
           title="ttcleaderboard"
-          description={<span>live ranking of streetcars by speed <strong style={{ color: "#333" }}>(15k+ users)</strong></span>}
+          description={<span>live ranking of streetcars by speed <strong className="hl">(200k+ views)</strong></span>}
           count={1}
         >
           <div className="space"></div>
@@ -121,7 +109,7 @@ function App() {
 
         <Dropdown
           title="savebasketweaving"
-          description={<span>emailer to protest OSAP cuts <strong style={{ color: "#333" }}>(1k+ emails sent)</strong></span>}
+          description={<span>emailer to protest OSAP cuts <strong className="hl">(1k+ emails sent)</strong></span>}
           count={2}
         >
           <div className="space"></div>
@@ -173,7 +161,7 @@ function App() {
 
         <Dropdown
           title="endocrine disruptors"
-          description={<span>applied ml research <strong style={{ color: "#333" }}>(labpath winner, published)</strong></span>}
+          description={<span>applied ml research <strong className="hl">(labpath winner, published)</strong></span>}
           count={4}
         >
           <div>
@@ -192,7 +180,7 @@ function App() {
 
         <Dropdown
           title="avocado"
-          description={<span>tiktok fact checker <strong style={{ color: "#333" }}>(deltahacks winner)</strong></span>}
+          description={<span>tiktok fact checker <strong className="hl">(deltahacks winner)</strong></span>}
           count={5}
         >
           <div>
@@ -206,17 +194,16 @@ function App() {
         </Dropdown>
 
         <Dropdown
-          title="studyscope"
-          description={<span>commissioned website for a tutoring service</span>}
+          title="syllavise"
+          description={<span>contracted app for school organization</span>}
           count={6}
         >
           <div>
-            Studyscope is an tutoring service for elementary and high school students. I was commissioned to
-            build them a website, and it's now maintained by their team.
+            Syllavise is a web and mobile app that uses AI to parse syllabi and provide reminders when work is due, keep track of GPA, and project future grades.
           </div>
           <div className="space"></div>
           <div>
-            site: <a href="https://studyscopetutoring.com/" target="_blank">studyscopetutoring.com</a>
+            site: <a href="https://syllavise.com/" target="_blank">syllavise.com</a>
           </div>
         </Dropdown>
 
@@ -281,7 +268,7 @@ function App() {
 
         <Dropdown
           title="yapchain"
-          description={<span>web3 based chatroom <strong style={{ color: "#333" }}>(jamhacks winner)</strong></span>}
+          description={<span>web3 based chatroom <strong className="hl">(jamhacks winner)</strong></span>}
           count={10}
         >
           <div>

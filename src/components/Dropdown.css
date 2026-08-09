@@ -1,52 +1,97 @@
 .dropdown {
-    margin-bottom: 0.25rem;
+    border-bottom: 1px solid var(--rule);
+}
+
+.dropdown:last-child {
+    border-bottom: none;
 }
 
 .dropdown-header {
     display: flex;
-    align-items: center;
+    align-items: baseline;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.6rem 0;
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+    text-align: left;
     cursor: pointer;
     user-select: none;
 }
 
+.dropdown-count {
+    flex-shrink: 0;
+    width: 2.1rem;
+    text-align: right;
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+}
+
 .dropdown-chevron {
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.2s ease;
-    margin-right: 0.4rem;
+    width: 0.5rem;
+    transform: translateY(0.05rem);
+    transition: transform 0.18s ease;
 }
 
 .dropdown-triangle {
     width: 0;
     height: 0;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 7px solid #999;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 6px solid var(--meta);
+    transition: border-left-color 0.15s ease;
 }
 
 .dropdown-chevron--open {
-    transform: rotate(90deg);
+    transform: translateY(0.05rem) rotate(90deg);
 }
 
-.dropdown-count {
-    width: 2rem;
-    text-align: right;
-    margin-right: 0.4rem;
-    color: #777;
+.dropdown-header:hover .dropdown-triangle {
+    border-left-color: var(--accent);
 }
 
 .dropdown-title {
-    /* font-weight: bold; */
-    margin-right: 0.4rem;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    font-variation-settings: 'opsz' 18;
 }
 
 .dropdown-description {
-    color: #777;
+    color: var(--muted);
+    font-size: 0.9375rem;
+    font-weight: 300;
 }
 
 .dropdown-content {
-    margin-left: calc(2.8rem + 7px);
-    margin-top: 0.25rem;
-    margin-bottom: 0.5rem;
+    margin-left: calc(2.1rem + 1rem);
+    padding-bottom: 1rem;
+    color: var(--muted);
+    font-size: 0.9375rem;
+    font-weight: 300;
+    line-height: 1.6;
+    text-wrap: pretty;
+}
+
+.dropdown-content .space {
+    height: 0.7rem;
+}
+
+@media (max-width: 720px) {
+    .dropdown-description {
+        display: none;
+    }
+
+    .dropdown-content {
+        margin-left: calc(2.1rem + 1rem);
+        font-size: 0.9rem;
+    }
 }
